@@ -3,9 +3,9 @@ import pickle
 # open a file, where you stored the pickled data
 file = open('important', 'rb')
 
-# dump information to that file
-data = pickle.load(file)
 
+data = pickle.load(file)
+print(data)
 # close the file
 file.close()
 

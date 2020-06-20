@@ -8,20 +8,22 @@ np.random.seed(19680801)
 fig = plt.figure()
 ax = Axes3D(fig)
 
-colors = ['r', 'g', 'b', 'y']
-yticks = [3, 2, 1, 0]
+colors = ['y', 'r', 'g', 'b', 'y']
+yticks = [4, 3, 2, 1, 0]
+
+
 for c, k in zip(colors, yticks):
     # Generate the random data for the y=k 'layer'.
-    xs = np.arange(20)
-    ys = np.random.rand(20)
+    xs = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    ys = [2, 1, 3, 4, 6, 12, 1, 3, 21, 32, 21]
 
     # You can provide either a single color or an array with the same length as
     # xs and ys. To demonstrate this, we color the first bar of each set cyan.
-    cs = [c] * len(xs)
-    cs[0] = 'c'
+    #cs = [c] * len(xs)
+    #cs[0] = 'c'
 
     # Plot the bar graph given by xs and ys on the plane y=k with 80% opacity.
-    ax.bar(xs, ys, zs=k, zdir='y', color=cs, alpha=0.8)
+    ax.bar(xs, ys, zs=k, zdir='y', alpha=0.8)
 
 ax.set_xlabel('X')
 ax.set_ylabel('Y')
@@ -32,12 +34,13 @@ ax.set_yticks(yticks)
 
 plt.show()
 
+
 import numpy as np
 import matplotlib.pyplot as plt
 
 
 # setup the figure and axes
-fig = plt.figure(figsize=(8, 3))
+fig = plt.figure(figsize=(8, 5))
 ax1 = Axes3D(fig)
 #ax2 = Axes3D(fig)
 
