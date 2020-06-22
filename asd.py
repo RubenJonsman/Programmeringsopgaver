@@ -9,6 +9,7 @@ def udskriv_graf():
 
     index = df['malkningnr']
     slut = index.__array__()[-1]
+    print(slut)
     start = slut - 5
 
     a = df.loc[start:slut] #kun i intervallet fra de sidste 5
